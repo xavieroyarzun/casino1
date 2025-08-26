@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link href="estilo.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+<h2>
+    REGISTRO
+</h2>
+<form >
+    <p> Usuario:<input type="text" id="nuevologin" ></p>
+    <p> Contraseña: <input type="password" id="nuevoContraseña"></p>
+        <input onclick="ir()" type ="button" value="registro"> 
+    <script>
+        function ir()
+        {
+            const nuevoUser= document.getElementById("nuevologin").value;
+            const nuevaContra = document.getElementById("nuevoContraseña").value;
+
+            localStorage.setItem("UsuarioGuardado",nuevoUser);
+            localStorage.setItem("ContraseñaGuardada",nuevaContra);
+
+            alert("Usuario registrado")
+            window.location="casino.html";
+           
+        }
+
+
+    </script>
+
+
+
+</form>
+
+
+
+
+</body>
+
+
+
+</html>
