@@ -1,6 +1,6 @@
 body
 {
-    background-color: rgb(9, 2, 49);
+    background-color: rgb(54, 1, 63);
 }
 #cosas
 {
@@ -15,8 +15,46 @@ body
     gap: 20px;
 }
 
+.imagen-con-texto {
+    position: relative;
+    display: inline-block;
+}
 
+.imagen-con-texto:hover .texto-imagen {
+    opacity: 1;
+}
 
+#titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.texto-imagen{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    color: white;
+    background: rgba(0,0,0,0.5);
+    padding: 8px 16px;
+    border-radius: 8px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.centramiento
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+}
 
 #topIyD
 {
@@ -33,6 +71,7 @@ body
 {
     width:200px ;
     height: 100px;
+    align-items: center;    
     
 }
 .boto
@@ -51,15 +90,25 @@ body
     background-color: #00ff3c;
     color: white;
 }
-#imagenes
-{
+#imagenes {
     height: 39vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px; /* Baja las imágenes un poco */
 }
-#imagenescasinos {
-    width: 100%;
-    height: 100%;
-    object-fit: contain; /* Mantiene la proporción sin estirar */
+
+.mantenerAspecto {
+    width: 350px;
+    height: 220px;
+    object-fit: contain;
     display: block;
+}
+
+.mantenerAspecto:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s;
 }
 
 
@@ -77,8 +126,3 @@ body
 }
 .izquierda { left: 0; }
 .derecha { right: 0; }
-
-    .mantenerAspecto {
-      width: 300px;
-      height: auto;
-    }
