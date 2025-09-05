@@ -1,0 +1,26 @@
+body
+{
+    background-color: rgb(69, 1, 78);
+}
+form
+{
+    margin: 25px;
+}
+
+
+.form1
+{
+    margin: 0;
+    height: 100vh; /* altura completa de la pantalla */
+    display: flex;
+    justify-content: center; /* centra horizontal */
+    align-items: center;
+}
+.form2
+{
+    width: auto;
+    height: auto;
+    background: lightblue;
+    text-align: center;
+    line-height: 20px;
+}
