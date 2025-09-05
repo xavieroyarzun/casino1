@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Autores</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: #03c9bf;
+    }
+
+    .autor {
+      display: flex;
+      align-items: center;
+      margin: 30px 0;
+    }
+
+    .autor img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%; /* foto circular */
+      object-fit: cover;
+      margin: 0 20px;
+    }
+
+    .texto {
+      max-width: 400px;
+      font-size: 18px;
+      background-color: rgba(3, 73, 134, 0.678);
+      padding: 10px;
+    }
+
+    /* Para la segunda fila invertimos el orden */
+    .autor.invertido{
+      flex-direction: row-reverse;
+    }
+  </style>
+</head>
+<body>
+
+  <h1> Autores</h1>
+
+  <!-- Primer autor -->
+  <div class="autor">
+    <img src="autor1.jpg" alt="Foto Autor 1">
+    <div class="texto">
+      <h2>Autor 1</h2>
+      <p>Breve descripción sobre el autor 1, sus intereses, proyectos y aportes al sitio web.</p>
+    </div>
+  </div>
+
+  <!-- Segundo autor -->
+  <div class="autor invertido">
+    <img src="autor2.jpg" alt="Foto Autor 2">
+    <div class="texto">
+      <h2>Autor 2</h2>
+      <p>Breve descripción sobre el autor 2, su experiencia, contribuciones y rol en el proyecto.</p>
+    </div>
+  </div>
+
+</body>
+</html>
