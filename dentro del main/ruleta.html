@@ -4,60 +4,132 @@
 <head>
     <title> Ruleta</title>
     <meta charset="utf-8">
-    <link href="estilo.css"rel="stylesheet" type="text/css">
-
+    <link href="Ruleta.css"rel="stylesheet" type="text/css">
+    
 </head>
 <body>
-    
-    <div id="ruleta">
-        <p> aqui esta la ruleta</p>
-    </div>
-    <div id="paraatras">
-        <p> ir para atras</p>
-    </div>
-    <div id="algo">
-        <p> algo nose</p>
-    </div>
+    <div class="imagenes">
+    <div id="imagen-con-texto">
+        <img src="../Img/ruletaimg.jpg" id="imagenruleta">
 
-    <style>
+    </div>
+    <div id="tabla">
+    <ul>
+        <li>
+            <a href="../Main.html " style="text-decoration: none; color: inherit;">
+                <p> para atras</p>
+            </a>
+        </li>
+        <li>
+            <button onclick ="document.getElementById('regla').style.display='block'"> Reglas</button>
+            
+        </li>
+        <li>
+            <a href="dineroretiro.html" style="text-decoration: none; color: inherit;">
+                <p> Transacciones</p>
+            </a>
+        </li>
 
-        #ruleta
-        {
-            
-        width: 63%;
-        height: 74%;
-        background: lightgreen;
-        position: absolute;
-        top: 50%;
-        left: 25%;
-        transform: translate(-24%, -48%);
-        }
-        #paraatras
-        {
-            
-        width: 18%;
-        height: 10%;
-        background: rgb(144, 224, 238);
-        position: absolute;
-        top: 50%;
-        left: 83%;
-        transform: translate(-24%, -48%);
-        text-align: center;
-        }
-        #algo
-        {
-            
-        width: 18%;
-        height: 10%;
-        background: rgb(230, 144, 238);
-        position: absolute;
-        top: 50%;
-        left: 83%;
-        transform: translate(-24%, -48%);
-        }
+
+    </ul>
+    </div>
+    </div>
+    <!-- Reglas-->
+    <div id="regla">
+        <div id="caja-reglas"> 
+            <ol>
+            <li> La Ruleta:    
+                <ul>
+                <li>
+                    <p> Tiene 37 casillas numeradas del 0 al 36.</p>
+                </li>
+                <li>
+                    <p> El 0 es verde y los números del 1 al 36 son rojos o negros.</p>
+                </li>
+                </ul>
+            </li>    
+
+            <li> Apuesta: 
+                <ul>
+                    <li>
+                        Los jugadores ponen fichas en el tapete antes de que la bola sea lanzada.
+                    </li>
+                    <li>
+                       Pueden apostar a:
+                    </li>
+                        <ul> 
+                            <li>
+                                Un solo número (pleno).
+                            </li>
+                            <li>
+                                Grupos de números (pares, impares, docenas, columnas, etc.).
+                            </li>
+                            <li>
+                                Colores (rojo o negro).
+                            </li>
+                            <li>
+                                Mitad de los números (1-18 o 19-36).
+                            </li>
+                        </ul>
+                    
+                </ul>
+            </li>
+            <li> Cierre de apuestas:   
+            <ul>
+                <li>
+                    El crupier anuncia “no va más” y ya no se aceptan más apuestas.
+                </li>
+            </ul>  
+            </li>
+            <li> Lanzamiento de la bola:    
+            <ul>
+                <li>
+                    El crupier hace girar la rueda en un sentido y lanza la bola en sentido contrario.
+                </li>
+            </ul>  
+            </li>
+            <li> Resultado:    
+            <ul>
+                <li>
+                    La bola cae en una casilla y se determina el número ganador (ejemplo: 23 negro)
+                </li>
+            </ul>  
+            </li>
+            <li> Pagos:<!-- No entiendo muy bien los pagos, el segundo grupo te devuelven el di
+                dinero que pagaste? no entiendo-->
+                <ul>
+                    <li>
+                        El crupier paga a los ganadores según el tipo de apuesta:
+                    </li>
+                    
+                        <ul> 
+                            <li>
+                               Pleno (1 número): 35 a 1.
+                            </li>
+                            <li>
+                                Color, par/impar, bajo/alto: 1 a 1.
+                            </li>
+                            <li>
+                                Docena o columna: 2 a 1.
+                            </li>
+                            <li>
+                                Y otros tipos de apuestas intermedias.
+                            </li>
+                        </ul>
+                    
+                </ul>
+            </li>
+
+
+            </ol>
+
+            <button class="cerrar" onclick="document.getElementById('regla').style.display='none'">
+            Cerrar
+
+        </div>
         
-    </style>
-
+    </button>
+    </div>
 </body>
 </html>
 <script src="java.js"> </script>

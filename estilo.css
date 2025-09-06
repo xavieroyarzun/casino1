@@ -90,7 +90,7 @@ body
     background-color: #00ff3c;
     color: white;
 }
-#imagenes {
+.imagenes {
     height: 39vh;
     display: flex;
     justify-content: center;
