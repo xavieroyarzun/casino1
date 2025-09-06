@@ -4,22 +4,22 @@
     justify-content: space-evenly;
     align-items: center;
     gap: 10px;
-    margin-top: 5%;
+   
     background-color: red;
 }
 #imagen-con-texto {
     position: relative;
     display: inline-block;
 }
-#tabla
+#conte_derecha
 {
-    font-size: 30px;
+    font-size: 20px;
 }
 #imagenruleta
 {
     height: 415px;
 }
-#regla {
+.antes_caja_reglas{
       display: none;
       position: fixed;
       z-index: 1000;
@@ -29,7 +29,7 @@
       height: 100%;
       background: rgba(0,0,0,0.6);
     }
-#caja-reglas {
+.caja-reglas {
       background: white;
       margin: 5% auto;
       padding: 20px;
@@ -47,4 +47,24 @@
       padding: 10px 20px;
       border-radius: 6px;
       cursor: pointer;
+}
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse; /* evita doble borde */
+}
+th, td {
+  text-align: center;  /* izquierda, derecha, center */
+  padding: 8px;        /* espacio interno de la celda */
+}
+td {
+  width: 150px;
+}
+#despues_top
+{
+    display: flex;
+    justify-content: center;
+}
+#top
+{
+    background-color: rgb(88, 5, 156);
 }

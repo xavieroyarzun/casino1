@@ -8,12 +8,19 @@
     
 </head>
 <body>
+    <div id="top">
+        <div id="despues_top">
+            <div>
+                <h1> Ruleta</h1>
+            </div>
+        </div>
+    </div>
     <div class="imagenes">
     <div id="imagen-con-texto">
         <img src="../Img/ruletaimg.jpg" id="imagenruleta">
 
     </div>
-    <div id="tabla">
+    <div id="conte_derecha">
     <ul>
         <li>
             <a href="../Main.html " style="text-decoration: none; color: inherit;">
@@ -29,14 +36,16 @@
                 <p> Transacciones</p>
             </a>
         </li>
-
+        <li>
+            <button onclick ="document.getElementById('tabla').style.display='block'"> Probabilidades</button>
+        </li>
 
     </ul>
     </div>
     </div>
     <!-- Reglas-->
-    <div id="regla">
-        <div id="caja-reglas"> 
+    <div class=" antes_caja_reglas"id="regla">
+        <div class="caja-reglas"> 
             <ol>
             <li> La Ruleta:    
                 <ul>
@@ -133,3 +142,91 @@
 </body>
 </html>
 <script src="java.js"> </script>
+<div class=" antes_caja_reglas"id="tabla">
+    <div class="caja-reglas">
+       
+            <table>Probabilidades de apuestas simples
+                <thead>
+                <tr>
+                    <th> Tipo de apuesta</th>
+                    <th> Casillas cubiertas</th>
+                    <th> Probabilidad</th>
+                     <th> Pago</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                    <td> Numero pleno </td>
+                    <td> 1</td>
+                    <td> 1/37 ≈2,70%</td>
+                    <td> 35:1</td>
+                    </tr>    
+                    <tr>
+                        <td> Rojo o negro </td>
+                        <td> 18</td>
+                        <td> 18/37 ≈ 48,65%</td>
+                        <td> 1:1</td>
+                    </tr>
+                    <tr>
+                        <td> Par o impar </td>
+                        <td> 18</td>
+                        <td> 18/37 ≈ 48,65%</td>
+                        <td> 1:1</td>
+                    </tr>
+                    <tr>
+                        <td> Bajo (1-18) o Alto (19-36) </td>
+                        <td> 18</td>
+                        <td> 18/37 ≈ 48,65%</td>
+                        <td> 1:1</td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+
+            <table>Probabilidades de apuestas múltiples
+                <thead>
+                <tr>
+                    <th> Tipo de apuesta</th>
+                    <th> Casillas cubiertas</th>
+                    <th> Probabilidad</th>
+                    <th> Pago</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                    <td> Docena </td>
+                    <td> 12</td>
+                    <td> 12/37 ≈ 32,43%</td>
+                    <td> 2:1</td>
+                    </tr>    
+                    <tr>
+                        <td> Columna </td>
+                        <td> 12</td>
+                        <td> 12/37 ≈ 32,43%</td>
+                        <td> 2:1</td>
+                    </tr>
+                    <tr>
+                        <td> Seis números </td>
+                        <td> 6</td>
+                        <td> 6/37 ≈ 16,22%</td>
+                        <td> 5:1</td>
+                    </tr>
+                    <tr>
+                        <td> Cuadro </td>
+                        <td> 4</td>
+                        <td> 4/37 ≈ 10,81%</td>
+                        <td> 8:1</td>
+
+                    </tr>
+                    <tr>
+                        <td> Línea</td>
+                        <td> 3</td>
+                        <td> 3/37 ≈ 8,11%</td>
+                        <td> 11:1</td>     
+
+                    </tr>
+                </tbody>
+            </table>
+         
+    </div>        
+</div>            
