@@ -5,47 +5,37 @@
     <title> Ruleta</title>
     <meta charset="utf-8">
     <link href="estilo.css"rel="stylesheet" type="text/css">
-
-</head>
-<body>
     
-    <div id="banco">
-
-    <header><h1>  BANCO </h1></header>
-    </div>
-
-    <div>
-
-
-        <p> no se que poner</p>
-
-
-
-    </div>
-
-
-
-
-
-
-
-
-
     <style>
+        #banco_fuera
+        {
+            max-width: 600px;
+        }
         #banco
         {
             text-align: center;
             background-color: aqua;
             border-radius: 10px;
+            
         }
-        body
+        #conte_caja
         {
-            width: 600px;
+        width: auto;
         margin: 20px auto;
-        background-color: #ff9500;
+        background-color: #4600a191;
         padding: 30px 20px 20px 20px ;
         border: 5px solid black;
         border-radius: 10px;
+        }
+        body
+        {
+        width: 600px;
+        margin: 20px auto;
+        background: linear-gradient(90deg,#fb923c 0%, #ef4444 100%);
+        padding: 30px 20px 20px 20px ;
+        border: 5px solid black;
+        border-radius: 10px;
+        
         }
         html{
         margin: 0;
@@ -56,8 +46,125 @@
         background-repeat: repeat;   
         background-size: 100%; 
         }
-
+        .antes_caja_reglas{
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.6);
+    }
+    .caja-reglas {
+      background: white;
+      margin: 5% auto;
+      padding: 20px;
+      width: 60%;
+      max-height: 80vh; /* límite de alto */
+      border-radius: 8px;
+      overflow-y: auto;
+    }
+    .cerrar {
+      display: block;
+      margin-top: 20px;
+      background: #f33;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+}
     </style>
+</head>
+<body>
+    
+    <div id="banco">
+
+    <header><h1>  BANCO </h1></header>
+    </div>
+    <div id="conte_caja">
+        <ul style=" ">
+            <li>
+                <h3>
+                    BILLETERA:
+                </h3>
+            </li>
+            <br>
+            <br>
+            <li>
+                <h3>
+                    <button onclick ="document.getElementById('Ingreso').style.display='block'"> INGRESO DE DINERO</button>
+                </h3>
+            </li>
+            <br>
+            <br>
+            <li>
+                <h3>
+                    <button onclick ="document.getElementById('RETIRO').style.display='block'"> RETIRO DE DINERO</button>
+                </h3>
+            </li>
+        </ul>
+
+
+
+    </div>
+
+    <div class =" antes_caja_reglas"id="Ingreso">
+        
+        <div class=" caja-reglas">
+        <form>
+            <label for="deposito">Monto a ingresar</label>
+         
+            <input
+              id="deposito"
+              name="deposito"
+              type="number"
+              inputmode="numeric"
+              min="1"
+              step="0.01"
+              placeholder="0.00"
+              
+              required
+            >
+          
+          <button type="submit"  title="Ingresar dinero">Depositar</button>
+          <button type="reset" >Limpiar</button>
+          
+        </form>
+        <button class="cerrar" onclick="document.getElementById('Ingreso').style.display='none'">
+            Cerrar</button>
+        </div>
+    </div>
+    <div class =" antes_caja_reglas"id="RETIRO">
+        
+        <div class=" caja-reglas">
+        <form>
+            <label for="deposito">Monto a retirar</label>
+         
+            <input
+              id="deposito"
+              name="deposito"
+              type="number"
+              inputmode="numeric"
+              min="1"
+              step="0.01"
+              placeholder="0.00"
+              
+              required
+            >
+          
+          <button type="submit"  title="Ingresar dinero">Retirar</button>
+          <button type="reset" >Limpiar</button>
+        </form>
+        <button class="cerrar" onclick="document.getElementById('RETIRO').style.display='none'">
+            Cerrar</button>
+        </div>
+    </div>
+
+
+
+
 
 </body>
 </html>
