@@ -4,42 +4,11 @@
     <title> CASINO</title>
     <meta charset="utf-8">
     <link href="estilo.css"rel="stylesheet" type="text/css">
-</head>
-<body>
-    <div style="height: 500px;">
-    <div id="foto">
-        <p> aqui hay una foto </p>
-    </div>
-    <div id="nomUsu">
-        <p> cambio de nombre </p>
-
-    </div>
-    <div id="linea">
-
-
-    </div>
-    <div id="nose">
-        <p> aqui no se que va</p>
-
-    </div>
-    </div>
     <style>
-        #foto
-        {
-        border-radius: 100%;
-        position: absolute;
-        background-color: aquamarine;
-        height: 300px;
-        width: 300px;
-        transform: translate(4%, 1%);
-        justify-content: space-around;
-        display: flex;
-        }
+        
         #nomUsu
         {
-        position: absolute;
-        top: 15%;
-        left: 59%;
+
         background-color: red;
         border-radius: 10px;
         padding: 8px;
@@ -52,14 +21,10 @@
         height: 2px;
         top: 75%;
         }
-        #nose
-        {
-        position: absolute;
-        top: 71%;
-        }
+        
         body
         {
-            height: auto;
+        height: auto;
         width: 600px;
         margin: 20px auto;
         background-color: #ff9500;
@@ -70,7 +35,107 @@
         html{
         background-color: #00879f;
         }
+        #fo_y_nom
+        {
+            display: flex;
+            justify-content: space-around;
+        }
+        table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse; /* evita doble borde */
+}
+th, td {
+  text-align: center;  /* izquierda, derecha, center */
+  padding: 8px;        /* espacio interno de la celda */
+}
+td {
+  width: 150px;
+}
     </style>
+</head>
+<body>
+    <div >
+    <div id="fo_y_nom">    
+    <div id="foto">
+       <img src="../Img/yo 2.jpg" style="border-radius: 100%;">
+    </div>
+    <div id="nomUsu">
+        <ul>
+            <li>
+                Nombre de usuario: XxxjosepexxX
+            </li>
+            <li>
+                Nombre completo: Jose alcachofa
+            </li>
+            <li>
+                Contraseña: xxxxx12
+            </li>
+            <li>
+                Gmail: Xxxjose_alcaxxX@gmail.com
+            </li>
+            <li>
+                Saldo: $1000
+            </li>
+
+        </ul>
+        <div style="background: linear-gradient(90deg,#fb923c 0%, #ef4444 100%);">
+             <a href="ruleta.html" style="text-decoration: none; color: inherit;">
+                <p style="font-size:xx-large;"> Ruleta </p>
+            </a>
+            
+        </div>
+    </div>
+
+    </div>
+    <br>
+    
+    <div id="linea">
+
+
+    </div>
+    <br>
+
+    <div style="display: flex; justify-content: center;">
+       <table style="background-color: rgba(0, 217, 255, 0.5);">
+            <tr>
+                    <th> Tipo </th>
+                    <th> Monto</th>
+                    <th> Fecha</th>
+                     
+            </tr>
+            <tbody>
+                    <tr>
+                    <td> Rojó </td>
+                    <td> $10000</td>
+                    <td> 1:11:2020</td>
+                    
+                    </tr> 
+                    <tr>
+                    <td> Número 7 </td>
+                    <td> $5000</td>
+                    <td> 11:11:2020</td>
+                    </tr> 
+                    <tr>
+                    <td> Par </td>
+                    <td> $2000</td>
+                    <td> 12:11:2020</td>
+                    </tr> 
+                    <tr>
+                    <td> Negro </td>
+                    <td> $1000</td>
+                    <td> 13:11:2020</td>
+                    </tr> 
+                    <tr>
+                    <td> Número 12 </td>
+                    <td> $25000</td>
+                    <td> 1:12:2020</td>
+                    </tr> 
+            </tbody>
+        </table>
+
+    </div>
+    </div>
+    
 
 
 </body>
