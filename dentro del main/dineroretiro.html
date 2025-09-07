@@ -22,10 +22,12 @@
         {
         width: auto;
         margin: 20px auto;
-        background-color: #4600a191;
+        background:linear-gradient(90deg,#038ba3 0%, #ef4444 100%);
         padding: 30px 20px 20px 20px ;
         border: 5px solid black;
         border-radius: 10px;
+        display: flex;
+        justify-content: center;
         }
         body
         {
@@ -46,7 +48,37 @@
         background-repeat: repeat;   
         background-size: 100%; 
         }
-
+        .antes_caja_reglas{
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.6);
+    }
+.caja-reglas {
+      background: white;
+      margin: 5% auto;
+      padding: 20px;
+      width: 60%;
+      max-height: 80vh; /* límite de alto */
+      border-radius: 8px;
+      overflow-y: auto;
+          top: 31%;
+        position: relative;
+    }
+.cerrar {
+      display: block;
+      margin-top: 20px;
+      background: #f33;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+}
     </style>
 </head>
 <body>
@@ -56,7 +88,7 @@
     <header><h1>  BANCO </h1></header>
     </div>
     <div id="conte_caja">
-        <ul style=" ">
+        <ul style=" list-style-type:none ;">
             <li>
                 <h3>
                     BILLETERA:
@@ -86,7 +118,7 @@
         
         <div class=" caja-reglas">
         <form>
-            <label for="deposito">Monto a ingresar</label>
+            <label for="deposito">Monto a depositar</label>
          
             <input
               id="deposito"
@@ -112,10 +144,10 @@
         
         <div class=" caja-reglas">
         <form>
-            <label for="deposito">Monto a retirar</label>
+            <label for="retiro">Monto a retirar</label>
          
             <input
-              id="deposito"
+              id="retiro"
               name="deposito"
               type="number"
               inputmode="numeric"

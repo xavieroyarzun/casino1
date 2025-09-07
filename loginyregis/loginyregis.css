@@ -21,12 +21,15 @@ form
     display: flex;
     justify-content: center; /* centra horizontal */
     align-items: center;
+    
 }
 .form2
 {
     width: auto;
     height: auto;
-    background: lightblue;
+    
     text-align: center;
     line-height: 17px;
+    background: linear-gradient(90deg,#fb923c 0%, #ef4444 100%);
+    border-radius: 10px;
 }
