@@ -10,14 +10,91 @@
 <body>
     <div id="top">
         <div id="despues_top">
+            
+            <div>
+                <h2> Saldo:</h2>
+            </div>
             <div>
                 <h1> Ruleta</h1>
             </div>
+            <div>
+                <h2>Estado:</h2>
+            </div>
         </div>
+
+
+
     </div>
     <div class="imagenes">
     <div id="imagen-con-texto">
         <img src="../Img/ruletaimg.jpg" id="imagenruleta">
+
+    </div>
+    <div>
+        <table>
+            <tr>
+                    <th> Últimos 5 números ganadores</th>
+            </tr>
+            <tbody>
+                    <tr>
+                    <td style="background-color: rgb(255, 0, 0)
+                    ;"> 1#: 3 </td>
+                    </tr>
+                    <tr style="background-color: rgb(255, 0, 0);">
+                    <td> 2#: 1 </td>
+                    </tr>
+                    <tr style="background-color: rgb(0, 0, 0);">
+                    <td style="color: white"> 3#: 4 </td>
+                    </tr>
+                    <tr style="background-color: rgb(255, 0, 0);">
+                    <td> 4#: 1</td>
+                    </tr>
+                    <tr style="background-color: rgb(255, 0, 0);">
+                    <td> 5#: 5 </td>
+                    </tr> 
+            </tbody>
+        </table>
+        <br>
+        <table style="background-color: rgba(0, 217, 255, 0.5);">
+            <tr>
+                    <th> Tipo </th>
+                    <th> Monto</th>
+                    <th> Resultado</th>
+                     <th> Variación del saldo  </th>
+            </tr>
+            <tbody>
+                    <tr>
+                    <td> Rojó </td>
+                    <td> $10000</td>
+                    <td> Ganó</td>
+                    <td> +$10000</td>
+                    </tr> 
+                    <tr>
+                    <td> Número 7 </td>
+                    <td> $50</td>
+                    <td> Perdió</td>
+                    <td> -$50</td>
+                    </tr> 
+                    <tr>
+                    <td> Par </td>
+                    <td> $200</td>
+                    <td> Ganó</td>
+                    <td> +$200</td>
+                    </tr> 
+                    <tr>
+                    <td> Negro </td>
+                    <td> $100</td>
+                    <td> Perdió</td>
+                    <td> -$100</td>
+                    </tr> 
+                    <tr>
+                    <td> Número 12 </td>
+                    <td> $25</td>
+                    <td> Perdió</td>
+                    <td> -$25</td>
+                    </tr> 
+            </tbody>
+        </table>
 
     </div>
     <div id="conte_derecha">
@@ -39,9 +116,14 @@
         <li>
             <button onclick ="document.getElementById('tabla').style.display='block'"> Probabilidades</button>
         </li>
-
+        <li>
+            <a href="cambioP.html " style="text-decoration: none; color: inherit;">
+                <p> Perfil</p>
+            </a>
+        </li>
     </ul>
     </div>
+    
     </div>
     <!-- Reglas-->
     <div class=" antes_caja_reglas"id="regla">
@@ -227,6 +309,7 @@
                     </tr>
                 </tbody>
             </table>
-         
+         <button class="cerrar" onclick="document.getElementById('tabla').style.display='none'">
+            Cerrar
     </div>        
 </div>            

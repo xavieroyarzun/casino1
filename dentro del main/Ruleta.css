@@ -5,7 +5,7 @@
     align-items: center;
     gap: 10px;
    
-    background-color: red;
+    background-color: rgba(49, 192, 5, 0.377);
 }
 #imagen-con-texto {
     position: relative;
@@ -62,7 +62,7 @@ td {
 #despues_top
 {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 #top
 {
