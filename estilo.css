@@ -64,14 +64,7 @@ body
     gap:20px;
 }
 
-/*#topIyD{
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #000000;
-    width: 100%;
-    max-width: auto;              
-    margin: 10px auto;}    */
+
 
 #casino
 {
@@ -129,15 +122,3 @@ body
 
 
 
-.boton{
-    position: absolute;
-  top:33%;
-  transform: translateY(-50%);
-  background-color: rgba(0,0,0,0.5);
-  color: white;
-  border: none;
-  font-size: 2rem;
-  cursor: pointer;
-}
-.izquierda { left: 0; }
-.derecha { right: 0; }
