@@ -17,3 +17,67 @@ body {
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
+
+    .texto-imagen{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    color: white;
+    background: rgba(0,0,0,0.5);
+    padding: 8px 16px;
+    border-radius: 8px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+    .foto-perfil {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 3px solid #000;
+            transition: box-shadow 0.2s;
+        }
+        #foto:hover {
+            box-shadow: 0 0 10px #ef4444;
+            cursor: pointer;
+            transform: scale(1.1);
+    transition: transform 0.2s;
+        }
+
+        #foto:hover .texto-imagen {
+            opacity: 1;
+        }
+        .nombre-con-boton {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .cambiar-nombre-btn {
+            padding: 4px 10px;
+            border-radius: 6px;
+            border: none;
+            background: #fb923c;
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .cambiar-nombre-btn:hover {
+            background: #ef4444;
+        }
+        #fo_y_nom {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+
+    #foto {
+    position: relative;
+    display: inline-block;
+}
