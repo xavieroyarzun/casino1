@@ -64,17 +64,15 @@ body
     gap:20px;
 }
 
-#topIyD
-{
+/*#topIyD{
     display:flex;
     justify-content: space-between;
     align-items: center;
     background-color: #000000;
     width: 100%;
     max-width: auto;              
-    margin: 10px auto;
+    margin: 10px auto;}    */
 
-}    
 #casino
 {
     width:200px ;
@@ -99,6 +97,15 @@ body
     color: white;
 }
 .imagenes {
+    height: 39vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 160px; /* Baja las imágenes un poco */
+}
+
+.imagenes2 {
     height: 39vh;
     display: flex;
     justify-content: center;
