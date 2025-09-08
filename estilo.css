@@ -1,46 +1,76 @@
-body
-{
-  margin: 0;
-  height: 100vh;
-  background: 
-    url("Img/Wallpaper.png"); 
-  background-position: center; 
-  background-repeat: repeat;   
-  background-size: auto;     
-
-
-}
-#cosas
-{
-    position: absolute;
-    left: 24%;
-    transform: translateX(-50%);
-}
-#listatotal
-{
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
+/* === Fondo y cuerpo general === */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    height: 100vh;
+    background: url("Img/Wallpaper.png");
+    background-position: center;
+    background-repeat: repeat;
+    background-size: auto;
 }
 
-.imagen-con-texto {
+/* === Fondo para páginas específicas (ajusta la ruta si es necesario) === */
+body.fondo-puerta {
+    background: url("Img/puerta.jpg");
+    background-position: center;
+    background-repeat: repeat;
+    background-size: auto;
+}
+body.fondo-wallpapapfp {
+    background: url("Img/WallpapaPFP.jpg");
+    background-position: center;
+    background-repeat: repeat;
+    background-size: 100%;
+}
+body.fondo-ruleta {
+    background: url("Img/ruleta.gif");
+    background-position: center;
+    background-repeat: repeat;
+    background-size: 100%;
+}
+body.fondo-ruleta-grad {
+    background: linear-gradient(90deg,#ffffffd8 0%, #000000 100%);
+    background-position: center;
+    background-repeat: repeat;
+    background-size: auto;
+}
+
+/* === Contenedores y cuadros === */
+.contenedor, #apicla {
+    width: 600px;
+    margin: 20px auto;
+    background-color: rgba(255, 166, 0, 0.8);
+    padding: 20px;
+    border: 5px solid black;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+#apicla {
+    border-radius: 20px;
+    padding: 30px 20px 20px 20px;
+    background-color: #ff9500;
+}
+
+/* === Imagen de perfil y hover texto === */
+#foto {
     position: relative;
     display: inline-block;
 }
-
-.imagen-con-texto:hover .texto-imagen {
-    opacity: 1;
+.foto-perfil {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #000;
+    transition: box-shadow 0.2s;
 }
-
-#titulo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
+#foto:hover {
+    box-shadow: 0 0 10px #ef4444;
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: transform 0.2s;
 }
-
-.texto-imagen{
+.texto-imagen {
     position: absolute;
     top:50%;
     left:50%;
@@ -55,32 +85,112 @@ body
     font-size: 1.2rem;
     text-align: center;
 }
+#foto:hover .texto-imagen {
+    opacity: 1;
+}
 
-.centramiento
-{
+/* === Botón cambiar nombre === */
+.nombre-con-boton {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.cambiar-nombre-btn {
+    padding: 4px 10px;
+    border-radius: 6px;
+    border: none;
+    background: #fb923c;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.cambiar-nombre-btn:hover {
+    background: #ef4444;
+}
+#fo_y_nom {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+/* === Imagenes de casino y centramiento === */
+.imagen-con-texto {
+    position: relative;
+    display: inline-block;
+}
+.imagen-con-texto:hover .texto-imagen {
+    opacity: 1;
+}
+.centramiento {
     display: flex;
     justify-content: center;
     align-items: center;
     gap:20px;
 }
+.imagenes, .imagenes2 {
+    height: 39vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.imagenes {
+    margin-top: 160px;
+}
+.imagenes2 {
+    margin-top: 20px;
+}
+.mantenerAspecto {
+    width: 350px;
+    height: 220px;
+    object-fit: contain;
+    display: block;
+}
+.mantenerAspecto:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s;
+}
 
-
-
-#casino
-{
+/* === Título centrado === */
+#titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+#casino {
     width:200px ;
     height: 100px;
-    align-items: center;    
-    
+    align-items: center;
 }
-.boto
-{
+
+/* === Botones generales === */
+.boto{
     padding: 10px 20px;
     border-radius: 8px;
     border: none;
+    background: linear-gradient(135deg, #4CAF50, #2E7D32);
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
     cursor: pointer;
-    font-weight: bold;
+    transition: 0.3s ease;
 }
+
+button, a {
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
 .boto:first-child{
     background-color: #007bff;
     color: white;
@@ -89,34 +199,170 @@ body
     background-color: #00ff3c;
     color: white;
 }
-.imagenes {
-    height: 39vh;
+button:hover, a:hover, .boto:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #66BB6A, #388E3C);
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.3);
+}
+.btn-outline {
+    border: 2px solid #4CAF50;
+    color: #4CAF50;
+}
+.btn-outline:hover {
+    background: #4CAF50;
+    color: white;
+}
+.btn-round {
+    border-radius: 50px;
+    padding: 10px 18px;
+}
+
+/* === Formularios login/register === */
+form {
+    margin: 14px;
+}
+.form1 {
+    margin: 0;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
-    margin-top: 160px; /* Baja las imágenes un poco */
+}
+.form2 {
+    width: auto;
+    height: auto;
+    text-align: center;
+    line-height: 17px;
+    background: linear-gradient(90deg,#fb923c 0%, #ef4444 100%);
+    border-radius: 10px;
+}
+input {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    background: linear-gradient(135deg, #4CAF50, #2E7D32);
+    color: azure;
+    font-size: 16px;
+    font-weight: 300;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+input::placeholder {
+    color: rgba(66, 1, 1, 0.418);
+}
+input:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #66BB6A, #388E3C);
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.3);
+    color: #ef4444;
 }
 
-.imagenes2 {
-    height: 39vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    margin-top: 20px; /* Baja las imágenes un poco */
+/* === Ruleta y tablas === */
+.imagenes.ruleta {
+    height: 80vh;
+    justify-content: space-evenly;
+    background:linear-gradient(90deg,#f082b5d8 0%, #ef4444 100%);
 }
-
-.mantenerAspecto {
-    width: 350px;
-    height: 220px;
-    object-fit: contain;
+#imagen-con-texto {
+    position: relative;
+    display: inline-block;
+}
+#conte_derecha {
+    font-size: 20px;
+}
+#imagenruleta {
+    height: 415px;
+}
+.antes_caja_reglas {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg,#04c950 0%, #04be58 100%);
+}
+.caja-reglas {
+    background: white;
+    margin: 5% auto;
+    padding: 20px;
+    width: 60%;
+    max-height: 80vh;
+    border-radius: 8px;
+    overflow-y: auto;
+}
+.cerrar {
     display: block;
+    margin-top: 20px;
+    background: #f33;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    text-align: center;
+    padding: 8px;
+}
+td {
+    width: 150px;
+}
+#despues_top {
+    display: flex;
+    justify-content: space-evenly;
+}
+#top {
+    color: white;
+    background:linear-gradient(90deg,#0325bb9d 0%, #0205b3b7 100%);
 }
 
-.mantenerAspecto:hover {
-    transform: scale(1.1);
-    transition: transform 0.2s;
+/* === Otros estilos === */
+#cosas {
+    position: absolute;
+    left: 24%;
+    transform: translateX(-50%);
+}
+#listatotal {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.autor {
+    display: flex;
+    align-items: center;
+    margin: 30px 0;
+}
+.autor img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 20px;
+    background-color: rgb(255, 0, 0);
+}
+.Titulo {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+.texto {
+    max-width: 400px;
+    font-size: 18px;
+    background-color: rgba(3, 73, 134, 0.678);
+    padding: 10px;
+}
+.autor.invertido {
+    flex-direction: row-reverse;
 }
 
 
