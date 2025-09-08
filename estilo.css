@@ -22,12 +22,7 @@ body.fondo-wallpapapfp {
     background-repeat: repeat;
     background-size: 100%;
 }
-body.fondo-ruleta {
-    background: url("Img/ruleta.gif");
-    background-position: center;
-    background-repeat: repeat;
-    background-size: 100%;
-}
+
 body.fondo-ruleta-grad {
     background: linear-gradient(90deg,#ffffffd8 0%, #000000 100%);
     background-position: center;
